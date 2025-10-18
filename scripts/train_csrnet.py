@@ -11,9 +11,9 @@ VAL_LIST   = "splits/val.txt"
 CKPT_DIR   = "checkpoints" 
 os.makedirs(CKPT_DIR, exist_ok=True)
 
-BATCH_SIZE = 1          # reduce to 2 if you get OOM
+BATCH_SIZE = 4          # reduce to 2 if you get OOM
 LR         = 1e-4
-EPOCHS     = 2       # stop earlier if val stops improving
+EPOCHS     = 100    # stop earlier if val stops improving
 DEVICE     = "cuda" if torch.cuda.is_available() else "cpu"
 AMP        = True       # mixed precision for speed on GPU
 
